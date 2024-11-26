@@ -1,13 +1,14 @@
 #!/bin/bash
 
-ROS_DIR="$HOME/dds_ros2_ws"
+ROS_DIR="$HOME"/dds_ros2_ws
 
 source /opt/ros/jazzy/setup.bash
-source $ROS_DIR/install/setup.bash
+source "$ROS_DIR"/install/setup.bash
 export RMW_IMPLEMENTATION=rmw_fastrtps_cpp
 
 #export FASTDDS_BUILTIN_TRANSPORTS=LARGE_DATA
-export FASTDDS_DEFAULT_PROFILES_FILE=$ROS_DIR/dds_config/dds_evalation_tcp_config.xml
+export FASTRTPS_DEFAULT_PROFILES_FILE=$ROS_DIR/dds_config/dds_evalation_tcp_config.xml
+export RMW_FASTRTPS_USE_QOS_FROM_XML=1
 
 # Check if a filename was provided as a parameter
 if [ -z "$1" ]; then

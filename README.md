@@ -50,7 +50,7 @@ export RMW_IMPLEMENTATION=rmw_fastrtps_cpp
 ```
 General 
 ```bash
-export FASTDDS_DEFAULT_PROFILES_FILE=$HOME/dds_ros2_ws/dds_config/dds_evalation_tcp_config.xml
+export FASTRTPS_DEFAULT_PROFILES_FILE=$HOME/dds_ros2_ws/dds_config/dds_evalation_tcp_config.xml
 export RMW_FASTRTPS_USE_QOS_FROM_XML=1
 ```
 ```bash
@@ -59,13 +59,13 @@ export FASTDDS_BUILTIN_TRANSPORTS=LARGE_DATA
 
 For Server:
 ```bash
-export FASTDDS_DEFAULT_PROFILES_FILE=$HOME/dds_ros2_ws/dds_config/dds_evalation_server_conig.xml
+export FASTRTPS_DEFAULT_PROFILES_FILE=$HOME/dds_ros2_ws/dds_config/dds_evalation_server_conig.xml
 export RMW_FASTRTPS_USE_QOS_FROM_XML=1
 ```
 
 For Client:
 ```bash
-export FASTDDS_DEFAULT_PROFILES_FILE=$HOME/dds_ros2_ws/dds_config/dds_evalation_client_conig.xml
+export FASTRTPS_DEFAULT_PROFILES_FILE=$HOME/dds_ros2_ws/dds_config/dds_evalation_client_conig.xml
 export RMW_FASTRTPS_USE_QOS_FROM_XML=1
 ```
 
