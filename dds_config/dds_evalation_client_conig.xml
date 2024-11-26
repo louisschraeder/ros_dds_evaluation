@@ -1,4 +1,5 @@
-<dds>
+<?xml version="1.0" encoding="UTF-8" ?>
+<dds xmlns="http://www.eprosima.com">
     <profiles>
         <participant profile_name="client_participant" is_default_profile="true">
             <rtps>
@@ -7,19 +8,9 @@
                 <userTransports>
                     <transport_id>TCPTransport</transport_id>
                 </userTransports>
-                <builtin>
-                    <discovery_config>
-                        <initialPeersList>
-                            <peer>
-                                <address>192.168.1.99</address> <!-- IP of server -->
-                                <port>5100</port>
-                            </peer>
-                        </initialPeersList>
-                    </discovery_config>
-                </builtin>
             </rtps>
         </participant>
-        <publisher profile_name="client_publisher" is_default_profile="true">
+        <data_writer profile_name="client_publisher" is_default_profile="true">
             <qos>
                 <partition>
                     <names>
@@ -27,8 +18,8 @@
                     </names>
                 </partition>
             </qos>
-        </publisher>
-        <subscriber profile_name="client_subscriber" is_default_profile="true">
+        </data_writer>
+        <data_reader profile_name="client_subscriber" is_default_profile="true">
             <qos>
                 <partition>
                     <names>
@@ -36,17 +27,15 @@
                     </names>
                 </partition>
             </qos>
-        </subscriber>
+        </data_reader>
         <transport_descriptors>
             <transport_descriptor>
                 <transport_id>TCPTransport</transport_id>
                 <type>TCPv4</type>
                 <wan_addr>192.168.1.99</wan_addr> <!-- IP of the server -->
-                <listener_port>5100</listener_port>
-                <!--                <use_keep_alive>true</use_keep_alive>-->
-                <!--                <keep_alive_frequency>2</keep_alive_frequency>-->
-                <!--                <wait_for_tcp_negotiation>true</wait_for_tcp_negotiation>-->
-                <!--                <enable_tcp_nodelay>true</enable_tcp_nodelay>-->
+                <listening_ports>
+                    <port>5100</port>
+                </listening_ports>
             </transport_descriptor>
         </transport_descriptors>
     </profiles>
