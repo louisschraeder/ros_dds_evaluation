@@ -22,7 +22,7 @@ BASE_FILENAME=$1
 TIME=$2
 
 # Define the directory for saving files
-OUTPUT_DIR="$HOME/ros2_ws/wireshark/demo/"
+OUTPUT_DIR="$HOME/dds_ros2_ws/wireshark/demo/"
 
 # Create the Wireshark folder if it doesn't exist
 if [ ! -d "$OUTPUT_DIR" ]; then

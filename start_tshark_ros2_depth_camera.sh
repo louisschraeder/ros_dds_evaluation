@@ -2,6 +2,7 @@
 
 source /opt/ros/jazzy/setup.bash
 source install/setup.bash
+export RMW_IMPLEMENTATION=rmw_fastrtps_cpp
 
 # Check if a filename was provided as a parameter
 if [ -z "$1" ]; then
@@ -22,7 +23,7 @@ BASE_FILENAME=$1
 TIME=$2
 
 # Define the directory for saving files
-OUTPUT_DIR="$HOME/ros2_ws/wireshark/depth_camera"
+OUTPUT_DIR="$HOME/dds_ros2_ws/wireshark/depth_camera"
 
 # Create the Wireshark folder if it doesn't exist
 if [ ! -d "$OUTPUT_DIR" ]; then
