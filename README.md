@@ -41,8 +41,15 @@ source install/setup.bash
 export RMW_IMPLEMENTATION=rmw_fastrtps_cpp
 ```
 
+For Server:
 ```bash
-export FASTDDS_DEFAULT_PROFILES_FILE=$HOME/dds_ros2_ws/dds_config/dds_evalation_conig.xml
+export FASTDDS_DEFAULT_PROFILES_FILE=$HOME/dds_ros2_ws/dds_config/dds_evalation_server_conig.xml
+export RMW_FASTRTPS_USE_QOS_FROM_XML=1
+```
+
+For Client:
+```bash
+export FASTDDS_DEFAULT_PROFILES_FILE=$HOME/dds_ros2_ws/dds_config/dds_evalation_client_conig.xml
 export RMW_FASTRTPS_USE_QOS_FROM_XML=1
 ```
 

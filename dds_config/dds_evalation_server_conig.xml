@@ -14,11 +14,24 @@
                 </builtin>
             </rtps>
         </participant>
+        <subscriber profile_name="server_subscriber" is_default_profile="true">
+            <qos>
+                <partition>
+                    <names>
+                        <name>client_partition</name> <!-- Accept Messages from clients -->
+                    </names>
+                </partition>
+            </qos>
+        </subscriber>
         <transport_descriptors>
             <transport_descriptor>
                 <transport_id>TCPTransport</transport_id>
                 <type>TCPv4</type>
                 <listener_port>5100</listener_port>
+<!--                <use_keep_alive>true</use_keep_alive>-->
+<!--                <keep_alive_frequency>2</keep_alive_frequency>-->
+<!--                <wait_for_tcp_negotiation>true</wait_for_tcp_negotiation>-->
+<!--                <enable_tcp_nodelay>true</enable_tcp_nodelay>-->
             </transport_descriptor>
         </transport_descriptors>
     </profiles>
