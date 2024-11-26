@@ -28,10 +28,10 @@
                 <transport_id>TCPTransport</transport_id>
                 <type>TCPv4</type>
                 <listener_port>5100</listener_port>
-<!--                <use_keep_alive>true</use_keep_alive>-->
-<!--                <keep_alive_frequency>2</keep_alive_frequency>-->
-<!--                <wait_for_tcp_negotiation>true</wait_for_tcp_negotiation>-->
-<!--                <enable_tcp_nodelay>true</enable_tcp_nodelay>-->
+                <!--                <use_keep_alive>true</use_keep_alive>-->
+                <!--                <keep_alive_frequency>2</keep_alive_frequency>-->
+                <!--                <wait_for_tcp_negotiation>true</wait_for_tcp_negotiation>-->
+                <!--                <enable_tcp_nodelay>true</enable_tcp_nodelay>-->
             </transport_descriptor>
         </transport_descriptors>
     </profiles>
