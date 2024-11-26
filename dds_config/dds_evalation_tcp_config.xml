@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <dds xmlns="http://www.eprosima.com">
     <profiles>
-        <participant profile_name="client_participant" is_default_profile="true">
+        <participant profile_name="participant_profile_ros2" is_default_profile="true">
             <rtps>
                 <name>Client</name>
                 <useBuiltinTransports>false</useBuiltinTransports>

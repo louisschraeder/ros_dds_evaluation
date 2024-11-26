@@ -4,7 +4,7 @@ source /opt/ros/jazzy/setup.bash
 source install/setup.bash
 export RMW_IMPLEMENTATION=rmw_fastrtps_cpp
 
-export FASTDDS_DEFAULT_PROFILES_FILE=$HOME/dds_ros2_ws/dds_config/dds_evalation_conig.xml
+export FASTDDS_DEFAULT_PROFILES_FILE=$HOME/dds_ros2_ws/dds_config/dds_evalation_tcp_conig.xml
 export RMW_FASTRTPS_USE_QOS_FROM_XML=1
 
 # Check if a filename was provided as a parameter
