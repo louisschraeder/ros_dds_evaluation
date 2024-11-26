@@ -1,7 +1,8 @@
 <dds>
     <profiles>
-        <participant profile_name="default_participant" is_default_profile="true">
+        <participant profile_name="client_participant" is_default_profile="true">
             <rtps>
+                <name>Client</name>
                 <useBuiltinTransports>false</useBuiltinTransports>
                 <userTransports>
                     <transport_id>TCPTransport</transport_id>
@@ -12,15 +13,8 @@
             <transport_descriptor>
                 <transport_id>TCPTransport</transport_id>
                 <type>TCPv4</type>
-                <use_keep_alive>true</use_keep_alive>
-                <keep_alive_frequency>2</keep_alive_frequency>
-                <wait_for_tcp_negotiation>true</wait_for_tcp_negotiation>
-                <enable_tcp_nodelay>true</enable_tcp_nodelay>
+                <wan_addr>192.168.1.99</wan_addr> <!-- IP of the server -->
                 <listener_port>5100</listener_port>
-                <whitelist>
-                    <address>192.168.1.82</address>
-                    <address>192.168.1.88</address>
-                </whitelist>
             </transport_descriptor>
         </transport_descriptors>
     </profiles>

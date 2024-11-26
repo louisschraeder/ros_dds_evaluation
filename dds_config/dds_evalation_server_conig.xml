@@ -1,0 +1,25 @@
+<dds>
+    <profiles>
+        <participant profile_name="server_participant" is_default_profile="true">
+            <rtps>
+                <name>Server</name>
+                <useBuiltinTransports>false</useBuiltinTransports>
+                <userTransports>
+                    <transport_id>TCPTransport</transport_id>
+                </userTransports>
+                <builtin>
+                    <discovery_config>
+                        <ignoreParticipantFlags>1</ignoreParticipantFlags> <!-- Ignore other participants -->
+                    </discovery_config>
+                </builtin>
+            </rtps>
+        </participant>
+        <transport_descriptors>
+            <transport_descriptor>
+                <transport_id>TCPTransport</transport_id>
+                <type>TCPv4</type>
+                <listener_port>5100</listener_port>
+            </transport_descriptor>
+        </transport_descriptors>
+    </profiles>
+</dds>

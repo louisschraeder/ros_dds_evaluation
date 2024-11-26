@@ -6,12 +6,14 @@ Creating a deployment key first.
 
 ```bash
 git clone git@github.com:louisschraeder/ros_dds_evaluation.git ros2_ws
+git submodule init
+git submodule update
 ```
 
 If it's the first time using ROS2, use:
 
 ```bash
-rosdep install -i --from-path src --rosdistro jazzy -y
+rosdep install --from src -i
 ```
 
 Build the project
