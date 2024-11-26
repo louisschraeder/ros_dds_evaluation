@@ -3,18 +3,10 @@
     <profiles>
         <participant profile_name="participant_profile_ros2" is_default_profile="true">
             <rtps>
-                <name>Client</name>
+                <name>Participant</name>
                 <useBuiltinTransports>false</useBuiltinTransports>
-                <userTransports>
-                    <transport_id>TCPTransport</transport_id>
-                </userTransports>
+                <builtinTransports>LARGE_DATA</builtinTransports>
             </rtps>
         </participant>
-        <transport_descriptors>
-            <transport_descriptor>
-                <transport_id>TCPTransport</transport_id>
-                <type>TCPv4</type>
-            </transport_descriptor>
-        </transport_descriptors>
     </profiles>
 </dds>

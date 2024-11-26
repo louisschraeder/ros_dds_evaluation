@@ -10,6 +10,10 @@ git submodule init
 git submodule update
 ```
 
+```bash
+git pull --recurse-submodules
+```
+
 If it's the first time using ROS2, use:
 
 ```bash
