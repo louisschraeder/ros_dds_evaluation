@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <dds xmlns="http://www.eprosima.com">
     <profiles>
-        <participant profile_name="participant_profile_ros2" is_default_profile="true">
+        <!--
+            UDP transport for PDP and SHM/TCPv4 transport for both EDP and application data
+        -->
+        <participant profile_name="large_data_builtin_transports" is_default_profile="true">
             <rtps>
-                <name>Participant</name>
-                <useBuiltinTransports>false</useBuiltinTransports>
                 <builtinTransports>LARGE_DATA</builtinTransports>
             </rtps>
         </participant>

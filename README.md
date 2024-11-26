@@ -69,6 +69,25 @@ export FASTDDS_DEFAULT_PROFILES_FILE=$HOME/dds_ros2_ws/dds_config/dds_evalation_
 export RMW_FASTRTPS_USE_QOS_FROM_XML=1
 ```
 
+## Run example
+
+### Demo
+
+```bash
+ros2 launch py_pubsub py_pubsub_talker.launch.py
+```
+
+### Depth Camera
+
+```bash
+ros2 launch simulated_depth_camera simulated_depth_camera_publisher.launch.py 
+```
+
+### IMU
+
+```bash
+ros2 launch simulated_imu simulated_imu_publisher.launch.py 
+```
 
 ```bash
 

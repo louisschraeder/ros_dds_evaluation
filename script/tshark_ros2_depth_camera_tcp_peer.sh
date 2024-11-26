@@ -44,7 +44,7 @@ cleanup() {
 
   # Stop both processes
   kill $TSHARK_PID
-  kill $ROS2_PID
+  kill "$ROS2_PID"
 
   echo "Tshark and ROS 2 programs have been stopped."
 }
