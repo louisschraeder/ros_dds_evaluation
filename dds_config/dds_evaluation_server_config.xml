@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <profiles xmlns="http://www.eprosima.com">
-    <participant profile_name="participant_discovery_protocol_alt" >
-        <rtps>
-            <builtinTransports>LARGE_DATA</builtinTransports>
+    <participant profile_name="participant_profile_discovery_server_server_metatraffic">
+       <rtps>
+           <builtinTransports>LARGE_DATA</builtinTransports>
             <builtin>
-                <discovery_config>
-                    <discoveryProtocol>SERVER</discoveryProtocol>
-                    <!-- alternatives
-                    <discoveryProtocol>SERVER</discoveryProtocol>
-                    <discoveryProtocol>SUPER_CLIENT</discoveryProtocol>
-                    <discoveryProtocol>BACKUP</discoveryProtocol>
-                    -->
-                    </discovery_config>
+                <metatrafficUnicastLocatorList>
+                    <locator>
+                        <udpv4>
+                           <!-- placeholder server UDP address -->
+                            <address>192.168.1.99</address>
+                            <port>64863</port>
+                        </udpv4>
+                    </locator>
+                </metatrafficUnicastLocatorList>
             </builtin>
         </rtps>
     </participant>
