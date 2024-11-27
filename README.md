@@ -5,7 +5,7 @@
 Creating a deployment key first.
 
 ```bash
-git clone git@github.com:louisschraeder/ros_dds_evaluation.git ros2_ws
+git clone git@github.com:louisschraeder/ros_dds_evaluation.git dds_ros2_ws
 git submodule init
 git submodule update
 ```

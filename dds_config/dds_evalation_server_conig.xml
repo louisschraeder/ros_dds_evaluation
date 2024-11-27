@@ -1,32 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<dds xmlns="http://www.eprosima.com">
-    <profiles>
-        <participant profile_name="server_participant" is_default_profile="true">
-            <rtps>
-                <name>Server</name>
-                <useBuiltinTransports>false</useBuiltinTransports>
-                <userTransports>
-                    <transport_id>TCPTransport</transport_id>
-                </userTransports>
-            </rtps>
-        </participant>
-        <data_reader profile_name="server_subscriber" is_default_profile="true">
-            <qos>
-                <partition>
-                    <names>
-                        <name>client_partition</name> <!-- Accept Messages from clients -->
-                    </names>
-                </partition>
-            </qos>
-        </data_reader>
-        <transport_descriptors>
-            <transport_descriptor>
-                <transport_id>TCPTransport</transport_id>
-                <type>TCPv4</type>
-                <listening_ports>
-                    <port>5100</port>
-                </listening_ports>
-            </transport_descriptor>
-        </transport_descriptors>
-    </profiles>
-</dds>
+<profiles xmlns="http://www.eprosima.com">
+    <participant profile_name="participant_discovery_protocol_alt" >
+        <rtps>
+            <builtinTransports>LARGE_DATA</builtinTransports>
+            <builtin>
+                <discovery_config>
+                    <discoveryProtocol>SERVER</discoveryProtocol>
+                    <!-- alternatives
+                    <discoveryProtocol>SERVER</discoveryProtocol>
+                    <discoveryProtocol>SUPER_CLIENT</discoveryProtocol>
+                    <discoveryProtocol>BACKUP</discoveryProtocol>
+                    -->
+                    </discovery_config>
+            </builtin>
+        </rtps>
+    </participant>
+</profiles>
