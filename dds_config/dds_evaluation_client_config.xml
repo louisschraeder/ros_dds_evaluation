@@ -1,21 +1,26 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<profiles xmlns="http://www.eprosima.com">
-    <participant profile_name="participant_profile_discovery_server_client_metatraffic">
-       <rtps>
-           <builtinTransports>LARGE_DATA</builtinTransports>
-            <builtin>
-                <discovery_config>
-                    <discoveryServersList>
-                        <locator>
-                            <udpv4>
-                                <!-- placeholder server UDP address -->
-                                <address>192.168.1.99</address>
-                                <port>64863</port>
-                            </udpv4>
-                        </locator>
-                    </discoveryServersList>
-                </discovery_config>
-            </builtin>
-        </rtps>
-    </participant>
-</profiles>
+ <dds>
+     <profiles xmlns="http://www.eprosima.com/XMLSchemas/fastRTPS_Profiles">
+         <participant profile_name="super_client_profile" is_default_profile="true">
+             <rtps>
+                 <builtin>
+                     <discovery_config>
+                         <discoveryProtocol>SUPER_CLIENT</discoveryProtocol>
+                         <discoveryServersList>
+                             <RemoteServer prefix="44.53.00.5f.45.50.52.4f.53.49.4d.41">
+                                 <metatrafficUnicastLocatorList>
+                                     <locator>
+                                         <udpv4>
+                                             <address>127.0.0.1</address>
+                                             <port>11811</port>
+                                         </udpv4>
+                                     </locator>
+                                 </metatrafficUnicastLocatorList>
+                             </RemoteServer>
+                         </discoveryServersList>
+                     </discovery_config>
+                 </builtin>
+             </rtps>
+         </participant>
+     </profiles>
+ </dds>

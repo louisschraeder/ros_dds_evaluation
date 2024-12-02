@@ -6,6 +6,7 @@ Creating a deployment key first.
 
 ```bash
 git clone git@github.com:louisschraeder/ros_dds_evaluation.git dds_ros2_ws
+cd dds_ros2_ws
 git submodule init
 git submodule update
 ```
@@ -48,13 +49,16 @@ source /opt/ros/jazzy/setup.bash
 source install/setup.bash
 export RMW_IMPLEMENTATION=rmw_fastrtps_cpp
 ```
-General 
+General TCP
 ```bash
 export FASTRTPS_DEFAULT_PROFILES_FILE=$HOME/dds_ros2_ws/dds_config/dds_evaluation_tcp_config.xml
 export RMW_FASTRTPS_USE_QOS_FROM_XML=1
 ```
+
+General UDP
 ```bash
-export FASTDDS_BUILTIN_TRANSPORTS=LARGE_DATA
+export FASTRTPS_DEFAULT_PROFILES_FILE=$HOME/dds_ros2_ws/dds_config/dds_evaluation_udp_config.xml
+export RMW_FASTRTPS_USE_QOS_FROM_XML=1
 ```
 
 For Server:
