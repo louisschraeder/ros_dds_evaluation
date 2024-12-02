@@ -7,7 +7,7 @@ source "$ROS_DIR"/install/setup.bash
 export RMW_IMPLEMENTATION=rmw_fastrtps_cpp
 
 #export FASTDDS_BUILTIN_TRANSPORTS=LARGE_DATA
-export FASTRTPS_DEFAULT_PROFILES_FILE=$ROS_DIR/dds_config/dds_evalation_tcp_config.xml
+export FASTRTPS_DEFAULT_PROFILES_FILE=$ROS_DIR/dds_config/dds_evaluation_tcp_config.xml
 export RMW_FASTRTPS_USE_QOS_FROM_XML=1
 
 # Check if a filename was provided as a parameter

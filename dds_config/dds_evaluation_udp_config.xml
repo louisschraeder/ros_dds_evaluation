@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <dds xmlns="http://www.eprosima.com">
     <profiles>
-        <!--
-            UDP transport for PDP and SHM/TCPv4 transport for both EDP and application data
-        -->
         <participant profile_name="default_builtin_transports" is_default_profile="true">
             <rtps>
                 <builtinTransports>DEFAULT</builtinTransports>
