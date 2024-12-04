@@ -72,7 +72,6 @@ export FASTRTPS_DEFAULT_PROFILES_FILE=$HOME/dds_ros2_ws/dds_config/dds_evaluatio
 export RMW_FASTRTPS_USE_QOS_FROM_XML=1
 ```
 
-For Client:
 ```bash
 export FASTRTPS_DEFAULT_PROFILES_FILE=$HOME/dds_ros2_ws/dds_config/dds_evaluation_udp_client_config.xml
 export RMW_FASTRTPS_USE_QOS_FROM_XML=1
