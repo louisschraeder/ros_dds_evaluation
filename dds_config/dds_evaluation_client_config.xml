@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <dds>
     <profiles xmlns="http://www.eprosima.com/XMLSchemas/fastRTPS_Profiles">
-        <participant profile_name="participant_profile_client">
+        <participant profile_name="participant_profile_client" is_default_profile="true">
             <rtps>
                 <builtin>
                     <discovery_config>
-                        <discoveryProtocol>SUPER_CLIENT</discoveryProtocol>
+                        <discoveryProtocol>CLIENT</discoveryProtocol>
                         <discoveryServersList>
                             <RemoteServer prefix="4D.49.47.55.45.4c.5f.42.41.52.52.4f">
                                 <metatrafficUnicastLocatorList>
@@ -23,6 +23,14 @@
                             <!-- change default to 250 ms -->
                             <nanosec>250000000</nanosec>
                         </clientAnnouncementPeriod>
+                        <leaseDuration>
+                            <sec>10</sec>
+                            <nanosec>20</nanosec>
+                        </leaseDuration>
+                        <leaseAnnouncement>
+                            <sec>1</sec>
+                            <nanosec>2</nanosec>
+                        </leaseAnnouncement>
                     </discovery_config>
                 </builtin>
             </rtps>
