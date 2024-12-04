@@ -23,14 +23,6 @@
                             <!-- change default to 250 ms -->
                             <nanosec>250000000</nanosec>
                         </clientAnnouncementPeriod>
-                        <leaseDuration>
-                            <sec>10</sec>
-                            <nanosec>20</nanosec>
-                        </leaseDuration>
-                        <leaseAnnouncement>
-                            <sec>1</sec>
-                            <nanosec>2</nanosec>
-                        </leaseAnnouncement>
                     </discovery_config>
                 </builtin>
             </rtps>
