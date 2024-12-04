@@ -63,8 +63,8 @@ export RMW_FASTRTPS_USE_QOS_FROM_XML=1
 
 For Server:
 ```bash
-export FASTRTPS_DEFAULT_PROFILES_FILE=$HOME/dds_ros2_ws/dds_config/dds_evaluation_server_config.xml
 export RMW_FASTRTPS_USE_QOS_FROM_XML=1
+fastdds discovery --server-id 0 -x $HOME/dds_ros2_ws/dds_config/dds_evaluation_server_config.xml 
 ```
 
 For Client:
