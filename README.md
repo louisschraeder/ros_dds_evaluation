@@ -63,10 +63,7 @@ export RMW_FASTRTPS_USE_QOS_FROM_XML=1
 
 For Server:
 ```bash
-fastdds discovery --server-id 0 -x $HOME/dds_ros2_ws/dds_config/dds_evaluation_tcp_server_config.xml 
-```
-```bash
-fastdds discovery --server-id 0 -x $HOME/dds_ros2_ws/dds_config/dds_evaluation_udp_server_config.xml 
+fastdds discovery --server-id 0 -x $HOME/dds_ros2_ws/dds_config/dds_evaluation_server_config.xml 
 ```
 
 For Client:
