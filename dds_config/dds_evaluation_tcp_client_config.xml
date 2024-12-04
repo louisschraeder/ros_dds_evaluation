@@ -1,44 +1,46 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<dds>
-    <profiles xmlns="http://www.eprosima.com/XMLSchemas/fastRTPS_Profiles">
+<dds xmlns="http://www.eprosima.com/XMLSchemas/fastRTPS_Profiles">
+    <profiles>
         <transport_descriptors>
             <transport_descriptor>
-                <transport_id>tcp2_transport</transport_id>
-                <type>TCPv4</type>
-                <listening_ports>
-                    <port>5100</port>
-                </listening_ports>
+                    <transport_id>client_tcp_transport</transport_id>
+                    <type>TCPv4</type>
+                    <!--
+                        Set listening port for the transport to 0.
+                        This automatically assigns a port.
+                    -->
+                    <listening_ports>
+                        <port>0</port>
+                    </listening_ports>
             </transport_descriptor>
         </transport_descriptors>
-
-        <participant profile_name="participant_profile_client" is_default_profile="true">
+        <participant profile_name="TCP_CLIENT" is_default_profile="true">
             <rtps>
-                <userTransports>
-                    <transport_id>tcp2_transport</transport_id>
-                </userTransports>
-                <useBuiltinTransports>false</useBuiltinTransports>
                 <builtin>
                     <discovery_config>
                         <discoveryProtocol>CLIENT</discoveryProtocol>
                         <discoveryServersList>
                             <RemoteServer prefix="44.53.00.5f.45.50.52.4f.53.49.4d.41">
+                                <!--
+                                    Server locator specifying where it is listening
+                                -->
                                 <metatrafficUnicastLocatorList>
                                     <locator>
-                                        <udpv4>
-                                            <!-- placeholder server UDP address -->
+                                        <tcpv4>
                                             <address>192.168.1.99</address>
-                                            <port>11811</port>
-                                        </udpv4>
+                                            <port>12345</port>
+                                            <physical_port>12345</physical_port>
+                                        </tcpv4>
                                     </locator>
                                 </metatrafficUnicastLocatorList>
                             </RemoteServer>
                         </discoveryServersList>
-                        <clientAnnouncementPeriod>
-                            <!-- change default to 250 ms -->
-                            <nanosec>250000000</nanosec>
-                        </clientAnnouncementPeriod>
                     </discovery_config>
                 </builtin>
+                <useBuiltinTransports>false</useBuiltinTransports>
+                <userTransports>
+                    <transport_id>client_tcp_transport</transport_id>
+                </userTransports>
             </rtps>
         </participant>
     </profiles>
