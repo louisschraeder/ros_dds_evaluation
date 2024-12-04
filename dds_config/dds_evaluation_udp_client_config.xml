@@ -4,7 +4,6 @@
         <participant profile_name="participant_profile_client" is_default_profile="true">
             <rtps>
                 <builtin>
-                    <builtinTransports>DEFAULT</builtinTransports>
                     <discovery_config>
                         <discoveryProtocol>CLIENT</discoveryProtocol>
                         <discoveryServersList>
