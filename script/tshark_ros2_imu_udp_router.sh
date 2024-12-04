@@ -1,12 +1,12 @@
 #!/bin/bash
 
-ROS_DIR="$HOME"/dds_ros2_ws
+ROS_DIR=$HOME/dds_ros2_ws
 
 source /opt/ros/jazzy/setup.bash
 source "$ROS_DIR"/install/setup.bash
 export RMW_IMPLEMENTATION=rmw_fastrtps_cpp
 
-export FASTRTPS_DEFAULT_PROFILES_FILE=$HOME/dds_ros2_ws/dds_config/dds_evaluation_tcp_client_config.xml
+export FASTRTPS_DEFAULT_PROFILES_FILE=$HOME/dds_ros2_ws/dds_config/dds_evaluation_udp_client_config.xml
 export RMW_FASTRTPS_USE_QOS_FROM_XML=1
 
 # Check if a filename was provided as a parameter
@@ -28,7 +28,7 @@ BASE_FILENAME=$1
 TIME=$2
 
 # Define the directory for saving files
-OUTPUT_DIR="$ROS_DIR/wireshark/depth_camera"
+OUTPUT_DIR="$ROS_DIR/wireshark/imu"
 
 # Create the Wireshark folder if it doesn't exist
 if [ ! -d "$OUTPUT_DIR" ]; then
@@ -63,7 +63,7 @@ sleep 5
 echo "Restarting ROS 2 daemon..."
 ros2 daemon start
 
-ros2 launch simulated_depth_camera simulated_depth_camera_subscriber.launch.py &
+ros2 launch simulated_imu simulated_imu_subscriber.launch.py &
 
 sleep "$TIME"
 
