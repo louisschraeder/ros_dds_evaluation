@@ -5,7 +5,7 @@
             <rtps>
                 <builtin>
                     <discovery_config>
-                        <discoveryProtocol>CLIENT</discoveryProtocol>
+                        <discoveryProtocol>SUPER_CLIENT</discoveryProtocol>
                         <discoveryServersList>
                             <RemoteServer prefix="4D.49.47.55.45.4c.5f.42.41.52.52.4f">
                                 <metatrafficUnicastLocatorList>

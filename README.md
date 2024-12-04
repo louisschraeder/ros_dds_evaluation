@@ -84,7 +84,7 @@ ros2 launch py_pubsub py_pubsub_talker.launch.py
 ### Depth Camera
 
 ```bash
-ros2 launch simulated_depth_camera simulated_depth_camera_publisher.launch.py 
+ros2 launch simulated_depth_camera simulated_depth_camera_publisher.launch.py
 ```
 
 ### IMU
