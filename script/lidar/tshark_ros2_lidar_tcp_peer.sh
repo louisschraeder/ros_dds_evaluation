@@ -67,13 +67,6 @@ sleep 5
 echo "Restarting ROS 2 daemon..."
 ros2 daemon start
 
-export ROS_DOMAIN_ID=1
-ros2 launch simulated_lidar simulated_lidar_subscriber.launch.py &
-export ROS_DOMAIN_ID=11
-ros2 launch simulated_lidar simulated_lidar_subscriber.launch.py &
-export ROS_DOMAIN_ID=3
-ros2 launch simulated_lidar simulated_lidar_subscriber.launch.py &
-export ROS_DOMAIN_ID=4
 ros2 launch simulated_lidar simulated_lidar_subscriber.launch.py &
 
 sleep "$TIME"

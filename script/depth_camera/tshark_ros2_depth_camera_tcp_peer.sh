@@ -67,10 +67,7 @@ sleep 5
 echo "Restarting ROS 2 daemon..."
 ros2 daemon start
 
-ROS_DOMAIN_ID=1 ros2 launch simulated_depth_camera simulated_depth_camera_subscriber.launch.py &
-ROS_DOMAIN_ID=2 ros2 launch simulated_depth_camera simulated_depth_camera_subscriber.launch.py &
-ROS_DOMAIN_ID=3 ros2 launch simulated_depth_camera simulated_depth_camera_subscriber.launch.py &
-ROS_DOMAIN_ID=4 ros2 launch simulated_depth_camera simulated_depth_camera_subscriber.launch.py &
+ros2 launch simulated_depth_camera simulated_depth_camera_subscriber.launch.py &
 
 sleep "$TIME"
 
