@@ -86,19 +86,19 @@ export RMW_FASTRTPS_USE_QOS_FROM_XML=1
 ### Depth Camera
 
 ```bash
-ros2 launch simulated_depth_camera simulated_depth_camera_publisher.launch.py
+ros2 launch simulated_depth_camera simulated_depth_camera_publisher.launch.py publisher_id:=
 ```
 
 ### IMU
 
 ```bash
-ros2 launch simulated_imu simulated_imu_publisher.launch.py 
+ros2 launch simulated_imu simulated_imu_publisher.launch.py publisher_id:=
 ```
 
 ### Lidar
 
 ```bash
-ros2 launch simulated_lidar simulated_lidar_publisher.launch.py
+ros2 launch simulated_lidar simulated_lidar_publisher.launch.py publisher_id:=
 ```
 
 ```bash

@@ -41,11 +41,14 @@ fi
 RAW_FILE="$OUTPUT_DIR/${BASE_FILENAME}_raw.pcap"
 
 cleanup() {
-  ROS2_PID=$(ps -eo pid,cmd | grep ros2 | grep subscriber_node | awk '{print $1}')
+  ROS2_PIDS=$(ps -eo pid,cmd | grep ros2 | grep subscriber_node | awk '{print $1}')
 
   # Stop both processes
   kill $TSHARK_PID
-  kill "$ROS2_PID"
+
+  for ROS2_PID in $ROS2_PIDS; do
+    kill "$ROS2_PID"
+  done
 
   echo "Tshark and ROS 2 programs have been stopped."
 }
@@ -64,6 +67,13 @@ sleep 5
 echo "Restarting ROS 2 daemon..."
 ros2 daemon start
 
+export ROS_DOMAIN_ID=1
+ros2 launch simulated_lidar simulated_lidar_subscriber.launch.py &
+export ROS_DOMAIN_ID=11
+ros2 launch simulated_lidar simulated_lidar_subscriber.launch.py &
+export ROS_DOMAIN_ID=3
+ros2 launch simulated_lidar simulated_lidar_subscriber.launch.py &
+export ROS_DOMAIN_ID=4
 ros2 launch simulated_lidar simulated_lidar_subscriber.launch.py &
 
 sleep "$TIME"
