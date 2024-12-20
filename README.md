@@ -83,12 +83,6 @@ export RMW_FASTRTPS_USE_QOS_FROM_XML=1
 
 ## Run example
 
-### Demo
-
-```bash
-ros2 launch py_pubsub py_pubsub_talker.launch.py
-```
-
 ### Depth Camera
 
 ```bash
@@ -99,6 +93,12 @@ ros2 launch simulated_depth_camera simulated_depth_camera_publisher.launch.py
 
 ```bash
 ros2 launch simulated_imu simulated_imu_publisher.launch.py 
+```
+
+### Lidar
+
+```bash
+ros2 launch simulated_lidar simulated_lidar_publisher.launch.py
 ```
 
 ```bash
