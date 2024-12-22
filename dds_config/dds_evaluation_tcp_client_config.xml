@@ -3,15 +3,15 @@
     <profiles>
         <transport_descriptors>
             <transport_descriptor>
-                    <transport_id>client_tcp_transport</transport_id>
-                    <type>TCPv4</type>
-                    <!--
-                        Set listening port for the transport to 0.
-                        This automatically assigns a port.
-                    -->
-                    <listening_ports>
-                        <port>0</port>
-                    </listening_ports>
+                <transport_id>client_tcp_transport</transport_id>
+                <type>TCPv4</type>
+                <!--
+                    Set listening port for the transport to 0.
+                    This automatically assigns a port.
+                -->
+                <listening_ports>
+                    <port>0</port>
+                </listening_ports>
             </transport_descriptor>
         </transport_descriptors>
         <participant profile_name="TCP_CLIENT" is_default_profile="true">
@@ -43,5 +43,41 @@
                 </userTransports>
             </rtps>
         </participant>
+
+        <!-- Data Writer QoS Profile (Publisher) -->
+        <data_writer profile_name="large_data_writer">
+            <qos>
+                <reliability>
+                    <kind>BEST_EFFORT</kind>
+                </reliability>
+                <durability>
+                    <kind>VOLATILE</kind>
+                </durability>
+            </qos>
+            <topic>
+                <historyQos>
+                    <kind>KEEP_LAST</kind> <!-- string -->
+                    <depth>10</depth> <!-- uint32 -->
+                </historyQos>
+            </topic>
+        </data_writer>
+
+        <!-- Data Reader QoS Profile (Subscriber) -->
+        <data_reader profile_name="large_data_reader">
+            <qos>
+                <reliability>
+                    <kind>BEST_EFFORT</kind>
+                </reliability>
+                <durability>
+                    <kind>VOLATILE</kind>
+                </durability>
+            </qos>
+            <topic>
+                <historyQos>
+                    <kind>KEEP_LAST</kind> <!-- string -->
+                    <depth>10</depth> <!-- uint32 -->
+                </historyQos>
+            </topic>
+        </data_reader>
     </profiles>
 </dds>

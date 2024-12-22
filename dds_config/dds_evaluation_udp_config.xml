@@ -6,5 +6,41 @@
                 <builtinTransports>DEFAULT</builtinTransports>
             </rtps>
         </participant>
+
+        <!-- Data Writer QoS Profile (Publisher) -->
+        <data_writer profile_name="large_data_writer">
+            <qos>
+                <reliability>
+                    <kind>BEST_EFFORT</kind>
+                </reliability>
+                <durability>
+                    <kind>VOLATILE</kind>
+                </durability>
+            </qos>
+            <topic>
+                <historyQos>
+                    <kind>KEEP_LAST</kind> <!-- string -->
+                    <depth>10</depth> <!-- uint32 -->
+                </historyQos>
+            </topic>
+        </data_writer>
+
+        <!-- Data Reader QoS Profile (Subscriber) -->
+        <data_reader profile_name="large_data_reader">
+            <qos>
+                <reliability>
+                    <kind>BEST_EFFORT</kind>
+                </reliability>
+                <durability>
+                    <kind>VOLATILE</kind>
+                </durability>
+            </qos>
+            <topic>
+                <historyQos>
+                    <kind>KEEP_LAST</kind> <!-- string -->
+                    <depth>10</depth> <!-- uint32 -->
+                </historyQos>
+            </topic>
+        </data_reader>
     </profiles>
 </dds>
