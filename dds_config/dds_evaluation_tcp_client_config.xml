@@ -45,7 +45,7 @@
         </participant>
 
         <!-- Data Writer QoS Profile (Publisher) -->
-        <data_writer profile_name="large_data_writer">
+        <data_writer profile_name="large_data_writer" is_default_profile="true">
             <qos>
                 <reliability>
                     <kind>BEST_EFFORT</kind>
@@ -63,7 +63,7 @@
         </data_writer>
 
         <!-- Data Reader QoS Profile (Subscriber) -->
-        <data_reader profile_name="large_data_reader">
+        <data_reader profile_name="large_data_reader" is_default_profile="true">
             <qos>
                 <reliability>
                     <kind>BEST_EFFORT</kind>
