@@ -4,3 +4,5 @@
 /log/
 /wireshark/
 /launch/
+*.mcap
+**/metadata.yaml
