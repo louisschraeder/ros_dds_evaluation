@@ -102,5 +102,5 @@ ros2 launch simulated_lidar simulated_lidar_publisher.launch.py publisher_id:=
 ```
 
 ```bash
-
+ros2 bag play rosbag2_2025_01_13-10_40_50_0.mcap --loop
 ```
