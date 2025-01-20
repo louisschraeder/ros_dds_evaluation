@@ -63,6 +63,8 @@ sleep 5
 echo "Restarting ROS 2 daemon..."
 ros2 daemon start
 
+ros2 launch topic_counter topic_counter_subscriber.launch.py &
+
 sleep "$TIME"
 
 cleanup
