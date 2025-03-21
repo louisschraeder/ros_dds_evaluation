@@ -36,7 +36,7 @@ source /opt/ros/jazzy/setup.bash
 ```bash
 source install/setup.bash
 ```
-
+Change script executability if necessary
 ```bash
 chmod +x file
 ```
@@ -49,17 +49,24 @@ source /opt/ros/jazzy/setup.bash
 source install/setup.bash
 export RMW_IMPLEMENTATION=rmw_fastrtps_cpp
 ```
-General TCP
+### General TCP
+
+Publishing / Subscribing data in the configuration (TCP, Peer)
+
 ```bash
 export FASTRTPS_DEFAULT_PROFILES_FILE=$HOME/dds_ros2_ws/dds_config/dds_evaluation_tcp_config.xml
 export RMW_FASTRTPS_USE_QOS_FROM_XML=1
 ```
 
-General UDP
+### General UDP
+
+Publishing / Subscribing data in the configuration (UDP, Peer)
+
 ```bash
 export FASTRTPS_DEFAULT_PROFILES_FILE=$HOME/dds_ros2_ws/dds_config/dds_evaluation_udp_config.xml
 export RMW_FASTRTPS_USE_QOS_FROM_XML=1
 ```
+### Router (TCP/UDP)
 
 For Server:
 ```bash
@@ -102,5 +109,5 @@ ros2 launch simulated_lidar simulated_lidar_publisher.launch.py publisher_id:=
 ```
 
 ```bash
-ros2 bag play rosbag2_2025_01_13-10_40_50_0.mcap --loop
+ros2 bag play ../ros_bag/rosbag2_2025_01_13-10_40_50/rosbag2_2025_01_13-10_40_50_0.mcap --loop
 ```
